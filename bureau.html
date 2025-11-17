@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang= "en">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="bureau.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=K2D:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Lexend:wght@100..900&family=Press+Start+2P&family=Volkhov:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    
+    <title>
+
+    </title>
+  </head>
+  <body>
+    <header>
+    </header>
+
+    
+        <div id="blur" class="hidden fixed overflow-scroll [scrollbar-width:none] text-xs grid justify-center items-center border-1 border-black h-screen w-screen bg-white/25 backdrop-blur-sm md:text-lg lg:text-xs">
+          <div id="form-cont" class="relative flex items-center flex-col border-[1px] border-black bg-white rounded-lg mt-1 mb-1 w-[22rem] pt-4 md:w-[28rem]">
+            <form method="post" class="">
+              <label for="name">Name:</label><br>
+              <input type="text" id="name" name="Name" required class="border-[1px] border-grey rounded-md mb-4 p-1 w-[14rem]"><br>
+        
+              <label for="role">Role:</label><br>
+              <input type="text" id="role" name="role" list="Roles" class="border-[1px] border-grey rounded-md mb-4 p-1 w-[14rem]" required><br>
+              <datalist id="Roles">
+                <option value="IT">
+                <option value="Manager">
+                <option value="Cleaning">
+                <option value="security">
+                <option value="reception">
+                <option value="other">
+              </datalist>
+        
+        
+              <label for="photo url">Photo URL:</label><br>
+              <input type="url" id="photourl" name="photo url"  placeholder="Enter an Image URL" class="border-[1px] border-grey rounded-md mb-4 p-1 w-[14rem]" accept="Image/*"><br>
+        
+              <div id="img-bg" class="bg-grey border-[1px] border-red border-dotted h-14 w-14 rounded-full">
+              </div>
+              <img id="preview" class="rounded-full hidden w-14 h-14 object-cover"/>
+              
+              <label for="email">Email:</label><br>
+              <input type="email" name="email" placeholder="email@example.com" class="border-[1px] border-grey rounded-md mb-4 p-1 w-[14rem]" required><br>
+        
+              <label for="phone">Phone</label><br>
+              <input type="number" name="phone" class="border-[1px] border-grey rounded-md mb-4 p-1 w-[14rem]" required><br>
+
+            </form>
+          <div id="exp-cont">
+            <div id="exp-block">
+              <h2 class="font-bold text-center">
+                Experiences
+              </h2>
+
+              <label for="type" class="">Experience in:</label><br>
+              <input type="text" name="type" class="border-[1px] border-grey rounded-md mb-4 p-1 w-[14rem]" required><br>
+
+
+              <label for="from" class="">From:</label><br>
+              <input type="date" name="from" class="border-[1px] p-2 border-grey rounded-md mb-4 w-[14rem]" required><br>
+
+
+              <label for="to" class="">To:</label><br>
+              <input type="date" name="to" class="border-[1px] p-2 border-grey rounded-md mb-4 w-[14rem]" required><br>
+        
+              <button  class="add-exp font-bold rounded-md mb-4  bg-uncommon p-2 w-[10rem] items-center md:w-[12rem]">+ Add Experience</button>
+            </div>
+          </div>
+          </div>
+          
+        </div>
+
+
+
+        <main class="absolute flex gap-3 top-0 right-0 w-screen md:w-screen h-[48vh]  lg:w-[72rem]">
+            <img src="imgs/plan-69159a65c5684763515973.jpg" class="absolute [z-index:-50] top-0 right-0 w-full h-full lg:h-[44rem] "  draggable="false">
+            <div class="relative workspace h-[43rem] w-[27rem] top-2">
+              <div id="conferecne" class=" h-[14.3rem] w-full hover:bg-uncommon opacity-30 transition">
+              </div>
+              <div id="reception" class="= h-[28.8rem] w-full hover:bg-red opacity-30 transition">
+              </div>
+            </div>
+            <div class="relative top-2 h-[43rem] w-[11.5rem]">
+            </div>
+            <div class="relative flex flex-col gap-4 right-2 top-2 w-[31.9rem] h-[43rem]">
+              <div class=" flex gap-[0.6rem] w-[32.1rem] h-[14.5rem]">
+                <div class="relative top-1  w-[15.6rem] h-[14.5rem] hover:bg-red opacity-30 transition">
+                </div>
+                <div class="relative top-1  w-[15.6rem] h-[14.5rem] hover:bg-red opacity-30 transition">
+
+                </div>
+              </div>
+              <div class="relative w-[31.8rem] h-[12rem]">
+
+              </div>
+              <div class=" flex gap-[0.6rem] w-[32.1rem] h-[14.5rem]">
+                <div class="relative top-1  w-[15.6rem] h-[14.5rem] hover:bg-uncommon opacity-30 transition">
+                </div>
+                <div class="relative top-1  w-[15.6rem] h-[14.5rem] hover:bg-red opacity-30 transition">
+
+                </div>
+              </div>
+            </div>
+          </main>
+
+
+
+    
+
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            'press-start': ['"Press Start 2P"', 'cursive'],
+            'K2D': ['"K2D"', 'cursive'],
+          },
+          colors: {
+            red: '#A63348',
+            magenta: '#5F425F',
+            blue: '#3B4A6B',
+            cyan: '#1B7C97',
+            myblue: '#3B4A6B',
+            gred: '#FF0000',
+            legendary: '#FFD400',
+            rare: '#0C0091',
+            uncommon: '#00FF11',
+            common: '#FFFFFF',
+            tblue: '#1F2937',
+            grey: '#6B7280',
+            gblue: '#374151',
+            stroke: '#4B5563',
+            underbg: '#E5E7EB',
+            grayish: '#374151',
+            brownish: '#EEB76B',
+            orangish: '#E2703A',
+            redmagenta: '#9C3D54',
+            dark_brown: '#310B0B',
+          }
+        }
+      }
+    }
+  </script>
+
+
+      <script type="text/javascript" src="bureau.js"></script>
+    
+  </body>
+</html>
