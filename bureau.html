@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="bureau.css">
+
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=K2D:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Lexend:wght@100..900&family=Press+Start+2P&family=Volkhov:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -23,7 +23,7 @@
     </header>
 
     
-        <div id="blur" class="hidden fixed overflow-scroll [scrollbar-width:none] text-xs grid justify-center items-center border-1 border-black h-screen w-screen bg-white/25 backdrop-blur-sm md:text-lg lg:text-xs">
+        <div id="blur" class="hidden z-[1000] fixed overflow-scroll [scrollbar-width:none] text-xs grid justify-center items-center border-1 border-black h-screen w-screen bg-white/25 backdrop-blur-sm md:text-lg lg:text-xs">
           <div id="form-cont" class="relative flex items-center flex-col border-[1px] border-black bg-white rounded-lg mt-1 mb-1 w-[22rem] pt-4 md:w-[28rem]">
             <form method="post" class="">
               <label for="name">Name:</label><br>
@@ -111,6 +111,16 @@
               </div>
             </div>
           </main>
+          <aside class="flex justify-center w-[21.3rem]">
+            <div>
+              <button id="Add" class="relative -z-12 top-4 bg-orangish text-black pl-8 pr-8 pt-1 pb-1 text-white font-semibold font-[Inter] rounded-full">
+                Add Worker
+              </button>
+              <div>
+
+              </div>
+            </div>
+          </aside>
 
 
 
