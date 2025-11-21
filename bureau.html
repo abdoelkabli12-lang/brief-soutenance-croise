@@ -1,237 +1,247 @@
 <!DOCTYPE html>
-<html lang= "en">
-  <head>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<html lang="en">
 
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=K2D:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Lexend:wght@100..900&family=Press+Start+2P&family=Volkhov:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    
-    <title>
-
-    </title>
-  </head>
-  <body>
-    <header>
-    </header>
-
-          <div id="ee" class="hidden z-[1000] fixed overflow-scroll [scrollbar-width:none] text-xs grid justify-center items-center border-1 border-black h-screen w-screen bg-white/25 backdrop-blur-sm md:text-lg lg:text-xs">
-            <div id="plusworker" class="flex justify-center bg-white h-[20rem] w-[20rem] overflow-x-auto [scrollbar-width:none] rounded-md">
-              <div id="workers-cont1" class="flex flex-col mt-12 flex items-center h-auto w-[12rem]">
-              </div>
-            </div>
-          </div>
-
-          <div id="bgblur" class="z-[1000] fixed text-xs grid justify-center items-center border-1 border-black h-screen w-screen bg-white/25 backdrop-blur-sm md:text-lg lg:text-md">
-            <div class="relative flex justify-center  bg-white h-[30rem] w-[30rem] rounded-2xl">
-              <div class="relative flex items-center bg-gradient-to-br from-brownish via-orangish via-redmagenta to-brownish w-full rounded-tl-2xl rounded-tr-2xl h-[12rem]">
-                <div class="relative w-full flex left-12 h-[50%] gap-6">
-                  <img src="imgs/images (2).jpg" class="relative rounded-2xl w-[6rem] h-[6rem] top-5 object-cover aspect-[1/1]">
-                  <div class="flex flex-col gap-1">
-                    <h3 class="font-bold text-md text-white">
-                      Abdelhadi
-                    </h3>
-                    <h4 class="font-bold text-sm">
-                      Manager
-                    </h4>
-                    <p class="font-semibold text-sm text-underbg">
-                      currently in: ${worker.currentPlace}
-                    </p>
-                    <p class="font-semibold text-sm text-underbg">
-                      abdo.el.kabli@gmail.com
-                    </p>
-                    <p class="font-semibold text-sm text-underbg">
-                      +212611980236
-                    </p>
-                  </div>
-                </div>
-              </div>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=K2D:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Lexend:wght@100..900&family=Press+Start+2P&family=Volkhov:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+    rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
 
-            </div>
-          </div>
+  <title>
 
-    
-        <div id="blur" class="hidden z-[1000] fixed overflow-scroll [scrollbar-width:none] text-xs grid justify-center items-center border-1 border-black h-screen w-screen bg-white/25 backdrop-blur-sm md:text-lg lg:text-xs">
-          <div id="form-cont" class="relative flex items-center flex-col border-[1px] border-black bg-white rounded-lg mt-1 mb-1 w-[22rem] pt-4 md:w-[28rem]">
-            <form method="post" class="forms">
-              <label for="name">Name:</label><br>
-              <input type="text" id="name" pattern="[A-Za-z\s]{3,}" title="the name must be at least letters with no numbers" name="Name"  class="border-[1px] border-grey rounded-md mb-4 p-1 w-[14rem]" required><br>
-        
-              <label for="role">Role:</label><br>
-              <input type="text" id="role" name="role" list="Roles" class="border-[1px] border-grey rounded-md mb-4 p-1 w-[14rem]" required><br>
-              <datalist id="Roles">
-                <option value="IT">
-                <option value="Manager">
-                <option value="Cleaning">
-                <option value="security">
-                <option value="reception">
-                <option value="other">
-              </datalist>
-        
-        
-              <label for="photo url">Photo URL:</label><br>
-              <input type="url" id="photourl" name="photo url"  placeholder="Enter an Image URL" class="border-[1px] border-grey rounded-md mb-4 p-1 w-[14rem]" accept="Image/*"><br>
-        
-              <div id="img-bg" class="bg-grey border-[1px] border-red border-dotted h-14 w-14 rounded-full">
-              </div>
-              <img id="preview" class="rounded-full hidden w-14 h-14 object-cover"/>
-              
-              <label for="email">Email:</label><br>
-              <input type="email" name="email" placeholder="email@example.com" pattern="^[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}$" title="please enter a valid email" class="border-[1px] border-grey rounded-md mb-4 p-1 w-[14rem]" required><br>
-        
-              <label for="phone">Phone:</label><br>
-              <input type="tel" name="phone" pattern="^((\+212[67])|(0[67]))[0-9]{8}$" class="border-[1px] border-grey rounded-md mb-4 p-1 w-[14rem]" required><br>
+  </title>
+</head>
+
+<body>
+  <header>
+  </header>
+
+  <div id="ee"
+    class="hidden z-[1000] fixed overflow-scroll [scrollbar-width:none] text-xs grid justify-center items-center border-1 border-black h-screen w-screen bg-white/25 backdrop-blur-sm md:text-lg lg:text-xs">
+    <div id="plusworker"
+      class="flex justify-center bg-white h-[20rem] w-[20rem] overflow-x-auto [scrollbar-width:none] rounded-md">
+      <div id="workers-cont1" class="flex flex-col mt-12 flex items-center h-auto w-[12rem]">
+      </div>
+    </div>
+  </div>
+
+  <div id="bgblur"
+    class="hidden z-[1000] fixed text-xs grid justify-center items-center border-1 border-black h-screen w-screen bg-white/25 backdrop-blur-sm md:text-lg lg:text-md">
+    <div id="profile-cont" class="relative flex flex-col items-center gap-8  bg-white h-[30rem] w-[30rem] rounded-2xl">
+    </div>
+  </div>
 
 
+  <div id="blur"
+    class="hidden z-[1000] fixed overflow-scroll [scrollbar-width:none] text-xs grid justify-center items-center border-1 border-black h-screen w-screen bg-white/25 backdrop-blur-sm md:text-lg lg:text-xs">
+    <div id="form-cont"
+      class="relative flex items-center flex-col border-[1px] border-black bg-white rounded-lg mt-1 mb-1 w-[22rem] pt-4 md:w-[28rem]">
+      <form method="post" class="forms">
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" pattern="[A-Za-z\s]{3,}" title="the name must be at least 3 letters with no numbers"
+          name="Name" class="border-[1px] border-grey rounded-md mb-4 p-1 w-[14rem]" required><br>
 
-              <div id="exp-cont">
-                <div id="exp-block">
-                  <h2 class="font-bold text-center">
-                    Experiences
-                  </h2>
+        <label for="role">Role:</label><br>
+        <input type="text" id="role" name="role" list="Roles"
+          class="border-[1px] border-grey rounded-md mb-4 p-1 w-[14rem]" required><br>
+        <datalist id="Roles">
+          <option value="IT">
+          <option value="Manager">
+          <option value="Cleaning">
+          <option value="security">
+          <option value="reception">
+          <option value="other">
+        </datalist>
 
 
+        <label for="photo url">Photo URL:</label><br>
+        <input type="url" id="photourl" name="photo url" placeholder="Enter an Image URL"
+          class="border-[1px] border-grey rounded-md mb-4 p-1 w-[14rem]" accept="Image/*"><br>
 
-                  <label for="type" class="">Experience in:</label><br>
-                  <input type="text" name="type" class="border-[1px] border-grey rounded-md mb-4 p-1 w-[14rem]" required><br>
-
-
-                  <label for="from" class="">From:</label><br>
-                  <input type="date" name="from" class="border-[1px] p-2 border-grey rounded-md mb-4 w-[14rem]" required><br>
-
-
-                  <label for="to" class="">To:</label><br>
-                  <input type="date" name="to" class="border-[1px] p-2 border-grey rounded-md mb-4 w-[14rem]" required><br>
-            
-                  <button  class="add-exp font-bold rounded-md mb-12  bg-uncommon p-2 w-[10rem] items-center md:w-[12rem]">+ Add Experience</button>
-            </form>
-                </div>
-
-              </div>
-            <button id="sub-btn" type="submit" class="add-exp font-bold rounded-md mt-12 mb-12 text-white  bg-brownish p-2 w-[10rem] items-center md:w-[12rem]">Add Worker</button>
-
-          </div>
-          
+        <div id="img-bg" class="bg-grey border-[1px] border-red border-dotted h-14 w-14 rounded-full">
         </div>
+        <img id="preview" class="rounded-full hidden w-14 h-14 object-cover" />
+
+        <label for="email">Email:</label><br>
+        <input type="email" name="email" id="email" placeholder="email@example.com"
+          pattern="^[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}$" title="please enter a valid email"
+          class="border-[1px] border-grey rounded-md mb-4 p-1 w-[14rem]" required><br>
+
+        <label for="phone">Phone:</label><br>
+        <input type="tel" name="phone" id="phone" pattern="^((\+212[67])|(0[67]))[0-9]{8}$"
+          class="border-[1px] border-grey rounded-md mb-4 p-1 w-[14rem]" required><br>
 
 
 
-        <main class="absolute flex gap-3 top-0 right-0 w-screen md:w-screen h-[48vh]  lg:w-[72rem]">
-            <img src="imgs/plan-69159a65c5684763515973.jpg" class="absolute [z-index:-50] top-0 right-0 w-full h-full lg:h-[44rem] "  draggable="false">
-            <div class="relative workspace h-[43rem] w-[27rem] top-2">
-              <div id="conference" class="flex justify-center h-[14.3rem] w-full hover:bg-uncommon/15 transition">
-                <p class="mt-4 text-black">
-                  conference
-                </p>
-                <div class="absolute flex flex-col items-center  h-30 w-full top-12">
-                  <div  class="work-cont w-[12rem] h-22" data-room="conference">
+        <div id="exp-cont">
+          <div id="exp-block">
+            <h2 class="font-bold text-center">
+              Experiences
+            </h2>
 
-                  </div>
-                  <button class="plus pl-2 pr-2 pb-1 rounded-md bg-rare text-white h-7 mt-8 ml-2">
-                    +
-                  </button>
-                </div>
-              </div>
-              <div id="reception" class=" flex justify-center h-[28.8rem] w-full hover:bg-red/15 transition">
-                <p class="absolute mt-4 text-black h-12">
-                  reception
-                </p>
-                <div class="relative flex flex-col items-center  h-30 w-full top-42">
-                  <div class="work-cont w-[12rem] h-22" data-room="reception">
 
-                  </div>
-                  <button class="plus pl-2 pr-2 pb-1 rounded-md bg-rare text-white h-7 mt-8 ml-2">
-                    +
-                  </button>
-                </div>
-              </div>
+
+            <label for="type" class="">Experience in:</label><br>
+            <input type="text" name="type" id="expIn" class="border-[1px] border-grey rounded-md mb-4 p-1 w-[14rem]" required><br>
+
+
+            <label for="from" class="">From:</label><br>
+            <input type="date" name="from" id="from" class="border-[1px] p-2 border-grey rounded-md mb-4 w-[14rem]" required><br>
+
+
+            <label for="to" class="">To:</label><br>
+            <input type="date" name="to" id="to" class="border-[1px] p-2 border-grey rounded-md mb-4 w-[14rem]" required><br>
+
+            <button class="add-exp font-bold rounded-md mb-12  bg-uncommon p-2 w-[10rem] items-center md:w-[12rem]">+
+              Add Experience</button>
+      </form>
+    </div>
+
+  </div>
+  <button id="sub-btn" type="submit"
+    class="add-exp font-bold rounded-md mt-12 mb-12 text-white  bg-brownish p-2 w-[10rem] items-center md:w-[12rem]">Add
+    Worker</button>
+
+  </div>
+
+  </div>
+
+
+
+  <main class="absolute flex gap-3 top-0 right-0 w-screen md:w-screen h-[48vh]  lg:w-[72rem]">
+    <img src="imgs/plan-69159a65c5684763515973.jpg"
+      class="absolute [z-index:-50] top-0 right-0 w-full h-full lg:h-[44rem] " draggable="false">
+    <div class="relative workspace h-[43rem] w-[27rem] top-2">
+      <div id="conference" class="flex justify-center h-[14.3rem] w-full hover:bg-uncommon/15 transition">
+        <p class="mt-4 text-black">
+          conference
+        </p>
+        <div class="absolute flex flex-col items-center  h-70 w-full top-12">
+          <div class="relative left-2 flex w-[27rem] justify-center overflow-x-auto [scrollbar-width:none]">
+            <div class="work-cont  flex justify-center gap-12 w-[60rem] " data-room="conference">
             </div>
-            <div class="relative top-2 h-[43rem] w-[11.5rem]">
+          </div>
+          <button class="plus pl-2 pr-2 pb-1 rounded-md bg-rare text-white h-7 mt-8 ml-2">
+            +
+          </button>
+        </div>
+      </div>
+      <div id="reception" class=" flex justify-center h-[28.8rem] w-full hover:bg-red/15 transition">
+        <p class="absolute mt-4 text-black h-12">
+          reception
+        </p>
+        <div class="relative flex flex-col items-center  h-30 w-full top-42">
+<div class="relative left-2 flex w-[27rem] justify-center overflow-x-auto [scrollbar-width:none]">
+            <div class="work-cont  flex justify-center gap-12 w-[60rem] " data-room="reception">
+              
             </div>
-            <div class="relative flex flex-col gap-4 right-2 top-2 w-[31.9rem] h-[43rem]">
-              <div class=" flex gap-[0.6rem] w-[32.1rem] h-[14.5rem]">
-                <div id="servers" class=" flex justify-center relative top-1  w-[15.6rem] h-[14.5rem] hover:bg-red/15 transition">
-                <p class="absolute mt-4 text-black">
-                  servers
-                </p>
-                <div class="relative top-15 flex flex-col items-center  h-30 w-full top-12">
-                  <div  class="work-cont w-[12rem] h-22" data-room="servers">
-                  </div>
-                  <button  class="plus pl-2 pr-2 pb-1 rounded-md bg-rare text-white h-7 mt-8 ml-2">
-                    +
-                  </button>
-                </div>
-                </div>
-                <div id="security"  class=" flex justify-center relative top-1 w-[15.6rem] h-[14.5rem] hover:bg-red/15 transition">
-                <p class="absolute mt-4 text-black">
-                  security
-                </p>
-                <div class="relative top-15 flex flex-col items-center  h-30 w-full top-12">
-                  <div  class="work-cont w-[12rem] h-22" data-room="security">
-                  </div>
-                  <button  class="plus pl-2 pr-2 pb-1 rounded-md bg-rare text-white h-7 mt-8 ml-2">
-                    +
-                  </button>
-                </div>
-                </div>
-              </div>
-              <div class="relative w-[31.8rem] h-[12rem]">
-              </div>
-              <div class=" flex gap-[0.6rem] w-[32.1rem] h-[14.5rem]">
-                <div id="personnel" class="flex justify-center relative top-1  w-[15.6rem] h-[14.5rem] hover:bg-uncommon/15 transition">
-                <p class="absolute mt-4 text-black">
-                  personnel
-                </p>
-                <div class="relative top-15 flex flex-col items-center  h-30 w-full top-12">
-                  <div  class="work-cont w-[12rem] h-22" data-room="personnel">
-                  </div>
-                  <button class="plus pl-2 pr-2 pb-1 rounded-md bg-rare text-white h-7 mt-8 ml-2">
-                    +
-                  </button>
-                </div>
-                </div>
-                <div id="vault" class="flex justify-center relative top-1  w-[15.6rem] h-[14.5rem] hover:bg-red/15 transition">
-                <p class="absolute mt-4 text-black">
-                  vault
-                </p>
-                <div class="relative top-15 flex flex-col items-center  h-30 w-full top-12">
-                  <div  class="work-cont w-[12rem] h-22" data-room="vault">
-                  </div>
-                  <button  class="plus pl-2 pr-2 pb-1 rounded-md bg-rare text-white h-7 mt-8 ml-2">
-                    +
-                  </button>
-                </div>
-                </div>
-              </div>
+          </div>
+          <button class="plus pl-2 pr-2 pb-1 rounded-md bg-rare text-white h-7 mt-8 ml-2">
+            +
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="relative top-2 h-[43rem] w-[11.5rem]">
+    </div>
+    <div class="relative flex flex-col gap-4 right-2 top-2 w-[31.9rem] h-[43rem]">
+      <div class=" flex gap-[0.6rem] w-[32.1rem] h-[14.5rem]">
+        <div id="servers"
+          class=" flex justify-center relative top-1  w-[15.6rem] h-[14.5rem] hover:bg-red/15 transition">
+          <p class="absolute mt-4 text-black">
+            servers
+          </p>
+          <div class="relative top-15 flex flex-col items-center  h-30 w-full top-12">
+          <div class="relative left-2 flex w-[16rem] overflow-x-auto [scrollbar-width:none]">
+            <div class="work-cont  flex justify-center gap-12 w-[80rem] " data-room="servers">
             </div>
-          </main>
-          <aside class="flex justify-center w-[21.2rem] h-screen">
-            <div>
-              <button id="Add" class="z-[100] relative -z-12 top-4 bg-orangish pl-8 pr-8 pt-1 pb-1 text-white font-semibold font-[Inter] rounded-full mb-12">
-                Add Worker
-              </button>
-              <div id="workers-cont" class="h-auto w-[17rem]">
-              </div>
+          </div>
+            <button class="plus pl-2 pr-2 pb-1 rounded-md bg-rare text-white h-7 mt-8 ml-2">
+              +
+            </button>
+          </div>
+        </div>
+        <div id="security"
+          class=" flex justify-center relative top-1 w-[15.6rem] h-[14.5rem] hover:bg-red/15 transition">
+          <p class="absolute mt-4 text-black">
+            security
+          </p>
+          <div class="relative top-15 flex flex-col items-center  h-30 w-full top-12">
+          <div class="relative left-2 flex w-[16rem] overflow-x-auto [scrollbar-width:none]">
+            <div class="work-cont  flex justify-center gap-12 w-[80rem] " data-room="security">
             </div>
-          </aside>
+          </div>
+            <button class="plus pl-2 pr-2 pb-1 rounded-md bg-rare text-white h-7 mt-8 ml-2">
+              +
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="relative w-[31.8rem] h-[12rem]">
+      </div>
+      <div class=" flex gap-[0.6rem] w-[32.1rem] h-[14.5rem]">
+        <div id="personnel"
+          class="flex justify-center relative top-1  w-[15.6rem] h-[14.5rem] hover:bg-uncommon/15 transition">
+          <p class="absolute mt-4 text-black">
+            personnel
+          </p>
+          <div class="relative top-15 flex flex-col items-center  h-30 w-full top-12">
+          <div class="relative left-2 flex w-[16rem] overflow-x-auto [scrollbar-width:none]">
+            <div class="work-cont  flex justify-center gap-12 w-[80rem] " data-room="personnel">
+            </div>
+          </div>
+            <button class="plus pl-2 pr-2 pb-1 rounded-md bg-rare text-white h-7 mt-8 ml-2">
+              +
+            </button>
+          </div>
+        </div>
+        <div id="vault" class="flex justify-center relative top-1  w-[15.6rem] h-[14.5rem] hover:bg-red/15 transition">
+          <p class="absolute mt-4 text-black">
+            vault
+          </p>
+          <div class="relative top-15 flex flex-col items-center  h-30 w-full top-12">
+          <div class="relative left-2 flex w-[16rem] overflow-x-auto [scrollbar-width:none]">
+            <div class="work-cont  flex justify-center gap-12 w-[80rem] " data-room="vault">
+            </div>
+          </div>
+            <button class="plus pl-2 pr-2 pb-1 rounded-md bg-rare text-white h-7 mt-8 ml-2">
+              +
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <aside class="flex justify-center w-[21.2rem] h-screen">
+    <div>
+      <button id="Add"
+        class="z-[100] relative -z-12 top-4 bg-orangish pl-8 pr-8 pt-1 pb-1 text-white font-semibold font-[Inter] rounded-full mb-12">
+        Add Worker
+      </button>
+      <div id="workers-cont" class="h-auto w-[17rem]">
+      </div>
+    </div>
+  </aside>
 
 
 
 
 
-    
 
 
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
     tailwind.config = {
       theme: {
         extend: {
@@ -267,7 +277,8 @@
   </script>
 
 
-      <script type="text/javascript" src="bureau.js"></script>
-    
-  </body>
+  <script type="text/javascript" src="bureau.js"></script>
+
+</body>
+
 </html>
