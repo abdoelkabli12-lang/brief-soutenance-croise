@@ -15,9 +15,23 @@ const plusWorker = document.getElementById("plusworker");
 const profileBG = document.getElementById("bgblur");
 const profileCont = document.getElementById("profile-cont");
 
+
 let dat = []
 let currentRoom = null;
 let experiences = [];
+
+function storeFitstExp() {
+  const subBtn = document.getElementById("sub-btn");
+  const firstExp = document.getElementById("start-expIn");
+const firstFrom = document.getElementById("start-from");
+const firstTo = document.getElementById("start-to");
+
+  subBtn.addEventListener("click", () => {
+    experiences.push({expIn: firstExp.value.trim(), From: firstFrom.value.trim(), To: firstTo.value.trim()});
+    console.log(experiences);
+  }) 
+}
+storeFitstExp();
 
 
 
@@ -47,17 +61,16 @@ function displayPhoto() {
 }
 document.addEventListener("DOMContentLoaded", () => {
 
-  const expCont = document.getElementById("exp-cont");
-  const expIn = document.getElementById("expIn");
-const from = document.getElementById("from");
-const to = document.getElementById("to");
-
+  
   function addExpBlock() {
-    let exp = {expIn: expIn.value, From: from.value, toD: to.value};
+    const expCont = document.getElementById("exp-cont");
+    const expIn = document.getElementById("expIn");
+    const from = document.getElementById("from");
+    const to = document.getElementById("to");
+
     let block = document.createElement("div");
     block.classList.add("exp-block", "mt-4");
-    experiences.push(exp);
-    console.log(experiences);
+
 
     block.innerHTML = `
       <label>Experience in:</label><br>
@@ -76,7 +89,9 @@ const to = document.getElementById("to");
     `;
 
     expCont.appendChild(block);
+    // const exp = {expIn: expIn.value.trim(), From:from.value.trim(), To:to.value.trim()};
     console.log(exp);
+    experiences.push(exp);
 
     block.querySelector(".add-exp").addEventListener("click", (e) => {
       e.preventDefault();
@@ -98,7 +113,7 @@ const to = document.getElementById("to");
 });
 
 AddWorker.addEventListener('click', () => {
-  formBG.classList.remove("hidden")
+  formBG.classList.remove("hidden");
 })
 
 formBG.onclick = () => {
@@ -240,7 +255,7 @@ function displaySiders(dat) {
 AddWorkerForm.addEventListener("click", (e) => {
   e.preventDefault();
   formCont.reportValidity(); // shows warnings
-  let worker = { name: Name.value, role: role.value, photo: photo.value, email: email.value, phone: phone.value };
+  let worker = { name: Name.value, role: role.value, photo: photo.value, email: email.value, phone: phone.value, exps: experiences};
 
   if (formCont.checkValidity()) {
     if (sideWorkers.children.length === 10) {
@@ -248,6 +263,7 @@ AddWorkerForm.addEventListener("click", (e) => {
     }
     else {
       dat.push(worker)
+        console.log(dat);
       console.log(dat);
       formBG.classList.add('hidden');
       let sideContainer = `
