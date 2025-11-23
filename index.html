@@ -37,7 +37,8 @@
 
   <div id="bgblur"
     class="hidden z-[1000] fixed text-xs grid justify-center items-center border-1 border-black h-screen w-screen bg-white/25 backdrop-blur-sm md:text-lg lg:text-md">
-    <div id="profile-cont" class="relative flex flex-col items-center gap-8  bg-white h-[30rem] w-[30rem] rounded-2xl">
+    <div id="profile-cont" class="relative flex flex-col items-center gap-8  bg-white w-[23rem] md:h-[30rem] md:w-[30rem] rounded-2xl">
+
     </div>
   </div>
 
@@ -117,33 +118,32 @@
   </div>
 
 
-
-  <main class="absolute flex gap-3 top-0 right-0 w-screen md:w-screen h-[48vh]  lg:w-[72rem]">
+<div class="grid  grid-cols-1">
+  <main class="absolute flex gap-3 top-0 right-0 w-screen h-[38vh] md:w-full md:h-[48vh]  lg:w-[72rem]">
     <img src="imgs/plan-69159a65c5684763515973.jpg"
-      class="absolute [z-index:-50] top-0 right-0 w-full h-full lg:h-[44rem] " draggable="false">
-    <div class="relative workspace h-[43rem] w-[27rem] top-2">
-      <div id="conference" class="flex justify-center h-[14.3rem] w-full hover:bg-uncommon/15 transition">
+      class="absolute [z-index:-50] top-0 right-0 w-full h-full lg:h-[44rem]" draggable="false">
+    <div class="relative workspace w-[9.4rem] h-[16rem]  md:w-[19.8rem] md:left-1 md:h-[33rem] lg:h-[43rem] lg:w-[27rem] lg:top-2">
+      <div id="conference" class="flex justify-center w-[9.4rem] h-[5.4rem] md:w-[20rem] md:h-[11rem] lg:h-[14.3rem] lg:w-full  hover:bg-uncommon/15 transition">
         <p class="mt-4 text-black">
           conference
         </p>
-        <div class="absolute flex flex-col items-center  h-70 w-full top-12">
-          <div class="relative left-2 flex w-[27rem] justify-center overflow-x-auto [scrollbar-width:none]">
-            <div class="work-cont  flex justify-center gap-12 w-[60rem] " data-room="conference">
+        <div class="absolute flex flex-col w-[9.4rem] h-[4rem] right-2 top-[2.2rem] items-center justify-center  md:w-[20rem] md:h-[9rem] md:right-0  lg:h-[12rem] lg:w-full lg:top-[5%] lg:right-0">
+          <div class="relative  left-2 flex w-[27rem] justify-center overflow-x-auto [scrollbar-width:none]">
+            <div class="work-cont bg-uncommon flex justify-center gap-12 w-[12rem] lg:w-[60rem] " data-room="conference">
             </div>
           </div>
-          <button class="plus pl-2 pr-2 pb-1 rounded-md bg-rare text-white h-7 mt-8 ml-2">
+          <button class="plus pl-2 pr-2 pb-1 rounded-md bg-rare text-white h-7 mt-8 ml-2 lg:text-[16px]">
             +
           </button>
         </div>
       </div>
-      <div id="reception" class=" flex justify-center h-[28.8rem] w-full hover:bg-red/15 transition">
+      <div id="reception" class="flex justify-center w-[9.4rem] h-[10.5rem] md:h-[21.7rem] md:w-full lg:h-[28.8rem] lg:w-full hover:bg-red/15 transition">
         <p class="absolute mt-4 text-black h-12">
           reception
         </p>
-        <div class="relative flex flex-col items-center  h-30 w-full top-42">
-<div class="relative left-2 flex w-[27rem] justify-center overflow-x-auto [scrollbar-width:none]">
+        <div class="relative  flex flex-col items-center w-[9.4rem] h-[5.6rem] right-1 top-19 md:h-[14rem] md:w-full md:top-32 md:right-0 lg:h-[18rem] lg:w-full lg:top-42 lg:right-0">
+        <div class="relative left-2 flex w-[27rem] justify-center overflow-x-auto [scrollbar-width:none]">
             <div class="work-cont  flex justify-center gap-12 w-[60rem] " data-room="reception">
-              
             </div>
           </div>
           <button class="plus pl-2 pr-2 pb-1 rounded-md bg-rare text-white h-7 mt-8 ml-2">
@@ -152,16 +152,16 @@
         </div>
       </div>
     </div>
-    <div class="relative top-2 h-[43rem] w-[11.5rem]">
+    <div class="relative  right-2 top-2 h-[15rem] w-[8.1rem] lg:h-[43rem] lg:w-[11.5rem]">
     </div>
-    <div class="relative flex flex-col gap-4 right-2 top-2 w-[31.9rem] h-[43rem]">
-      <div class=" flex gap-[0.6rem] w-[32.1rem] h-[14.5rem]">
+    <div class="relative flex flex-col gap-4 w-[11rem] md:w-[23rem] md:right-2 lg:right-2 lg:top-2 lg:w-[31.9rem] lg:h-[43rem]">
+      <div class=" flex gap-[0.6rem] lg:w-[32.1rem] lg:h-[14.5rem]">
         <div id="servers"
-          class=" flex justify-center relative top-1  w-[15.6rem] h-[14.5rem] hover:bg-red/15 transition">
+          class=" flex justify-center relative w-[5.4rem] h-[5rem] top-1 md:w-[11rem] md:h-[11.2rem]  lg:w-[15.6rem] lg:h-[14.5rem] hover:bg-red/15 transition">
           <p class="absolute mt-4 text-black">
             servers
           </p>
-          <div class="relative top-15 flex flex-col items-center  h-30 w-full top-12">
+          <div class="relative flex flex-col items-center h-[3rem] w-[5.3rem] md:h-[7rem] md:w-[11rem]  md:top-[4rem] lg:top-[7rem] lg:h-[7.5rem] lg:w-full top-9">
           <div class="relative left-2 flex w-[16rem] overflow-x-auto [scrollbar-width:none]">
             <div class="work-cont  flex justify-center gap-12 w-[80rem] " data-room="servers">
             </div>
@@ -172,11 +172,11 @@
           </div>
         </div>
         <div id="security"
-          class=" flex justify-center relative top-1 w-[15.6rem] h-[14.5rem] hover:bg-red/15 transition">
+          class = " flex justify-center relative w-[5.4rem] h-[5rem] top-1 md:w-[11rem] md:h-[11.2rem]  lg:w-[15.6rem] lg:h-[14.5rem] hover:bg-red/15 transition">
           <p class="absolute mt-4 text-black">
             security
           </p>
-          <div class="relative top-15 flex flex-col items-center  h-30 w-full top-12">
+          <div class="relative flex flex-col items-center h-[3rem] w-[5.3rem] md:h-[7rem] md:w-[11rem] md:top-[4rem] lg:top-[7rem] lg:h-[7.5rem] lg:w-full top-9">
           <div class="relative left-2 flex w-[16rem] overflow-x-auto [scrollbar-width:none]">
             <div class="work-cont  flex justify-center gap-12 w-[80rem] " data-room="security">
             </div>
@@ -187,15 +187,15 @@
           </div>
         </div>
       </div>
-      <div class="relative w-[31.8rem] h-[12rem]">
+      <div class="relative w-[10rem] h-[5rem] md:w-[23rem] md:h-[11rem] lg:w-[31.8rem] lg:h-[12rem]">
       </div>
-      <div class=" flex gap-[0.6rem] w-[32.1rem] h-[14.5rem]">
+      <div class=" flex gap-[0.6rem] lg:w-[32.1rem] lg:h-[14.5rem]">
         <div id="personnel"
-          class="flex justify-center relative top-1  w-[15.6rem] h-[14.5rem] hover:bg-uncommon/15 transition">
+          class = " flex justify-center relative w-[5.4rem] h-[5rem] top-0 md:w-[11rem] md:h-[11.2rem]  lg:w-[15.6rem] lg:h-[14.5rem] hover:bg-red/15 transition">
           <p class="absolute mt-4 text-black">
             personnel
           </p>
-          <div class="relative top-15 flex flex-col items-center  h-30 w-full top-12">
+          <div class="relative  flex flex-col items-center h-[3rem] w-[5.3rem] md:h-[7rem] md:w-[11rem] md:top-[4rem] lg:top-[7rem] lg:h-[7.5rem] lg:w-full top-9">
           <div class="relative left-2 flex w-[16rem] overflow-x-auto [scrollbar-width:none]">
             <div class="work-cont  flex justify-center gap-12 w-[80rem] " data-room="personnel">
             </div>
@@ -205,13 +205,13 @@
             </button>
           </div>
         </div>
-        <div id="vault" class="flex justify-center relative top-1  w-[15.6rem] h-[14.5rem] hover:bg-red/15 transition">
+        <div id="vault" class = " flex justify-center relative w-[5rem] h-[5rem] top-0 md:w-[11rem] md:h-[11.2rem] lg:w-[15.6rem] lg:h-[14.5rem] hover:bg-red/15 transition">
           <p class="absolute mt-4 text-black">
             vault
           </p>
-          <div class="relative top-15 flex flex-col items-center  h-30 w-full top-12">
-          <div class="relative left-2 flex w-[16rem] overflow-x-auto [scrollbar-width:none]">
-            <div class="work-cont  flex justify-center gap-12 w-[80rem] " data-room="vault">
+          <div class="relative flex flex-col items-center h-[3rem] w-[5.3rem] right-2 md:h-[7rem] md:w-[11rem] md:top-[4rem] lg:top-[7rem] lg:h-[7.5rem] lg:w-full top-9">
+          <div class="relative left-2 flex w-[5rem] h-[8rem] lg:w-[16rem] lg:h-[12rem] overflow-x-auto [scrollbar-width:none]">
+            <div class="work-cont  flex justify-center w-[60rem] lg:gap-12 lg:w-[80rem] " data-room="vault">
             </div>
           </div>
             <button class="plus pl-2 pr-2 pb-1 rounded-md bg-rare text-white h-7 mt-8 ml-2">
@@ -222,16 +222,19 @@
       </div>
     </div>
   </main>
-  <aside class="flex justify-center w-[21.2rem] h-screen">
+  <aside class="relative flex justify-center h-[50vh] top-[40vh] md:top-[49vh] lg:w-[20.4rem] lg:h-screen lg:top-0">
     <div>
       <button id="Add"
-        class="z-[100] relative -z-12 top-4 bg-orangish pl-8 pr-8 pt-1 pb-1 text-white font-semibold font-[Inter] rounded-full mb-12">
+        class="z-[100] relative left-12 -z-12 top-4 bg-orangish pl-8 pr-8 pt-1 pb-1 text-white font-semibold font-[Inter] rounded-full mb-12">
         Add Worker
       </button>
       <div id="workers-cont" class="h-auto w-[17rem]">
       </div>
     </div>
   </aside>
+</div>
+
+
 
 
 

@@ -74,13 +74,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
     block.innerHTML = `
       <label>Experience in:</label><br>
-      <input type="text" id = "expIn" name="type" class="border border-grey rounded-md mb-4 p-1 w-[14rem]" required><br>
+      <input type="text" name="type" class="expIn border border-grey rounded-md mb-4 p-1 w-[14rem]" required><br>
 
       <label>From:</label><br>
-      <input type="date" name="from" id = "from" class="border p-2 border-grey rounded-md mb-4 w-[14rem]" required><br>
+      <input type="date" name="from" class="from border p-2 border-grey rounded-md mb-4 w-[14rem]" required><br>
 
       <label>To:</label><br>
-      <input type="date" name="to" id = "to" class="border p-2 border-grey rounded-md mb-4 w-[14rem]" required><br>
+      <input type="date" name="to" class="to border p-2 border-grey rounded-md mb-4 w-[14rem]" required><br>
 
       <div class = "">
       <button class="add-exp font-bold rounded-md mb-4  bg-uncommon p-2 w-[10rem] items-center md:w-[12rem]">+ Add Experience</button><br>
@@ -89,9 +89,6 @@ document.addEventListener("DOMContentLoaded", () => {
     `;
 
     expCont.appendChild(block);
-    // const exp = {expIn: expIn.value.trim(), From:from.value.trim(), To:to.value.trim()};
-    console.log(exp);
-    experiences.push(exp);
 
     block.querySelector(".add-exp").addEventListener("click", (e) => {
       e.preventDefault();
@@ -103,8 +100,8 @@ document.addEventListener("DOMContentLoaded", () => {
       block.remove();
     });
   }
-
-
+  
+  
   const firstAddBtn = document.querySelector(".add-exp");
   firstAddBtn.addEventListener("click", (e) => {
     e.preventDefault();
@@ -134,16 +131,29 @@ plusbtn.forEach(btn => {
   btn.addEventListener("click", (e) => {
     const parent = e.target.closest("[id]");
     const roomId = parent.id;
-
+    
     addAWorker.classList.remove("hidden");
-
+    
     const allowed = getWorkersAllowedIn(roomId);
-
+    
     displayWorkers(allowed);
   });
 });
 
 
+function collectExperiences() {
+  const allBlocks = document.querySelectorAll(".exp-block");
+
+  allBlocks.forEach(block => {
+      const expIn = block.querySelector(".expIn").value.trim();
+      const from = block.querySelector(".from").value.trim();
+      const to = block.querySelector(".to").value.trim();
+
+      experiences.push({ expIn: expIn, from:from, to:to});
+  });
+
+  return experiences;
+}
 // function assignPermissions(worker) {
 //   worker.rooms = getRoomsForRole(worker.role);
 // }
@@ -243,7 +253,39 @@ plusbtn.forEach(btn => {
   });
 });
 
+  function openProfile(worker) {
+  profileBG.classList.remove("hidden");
 
+  profileCont.innerHTML = `
+    <div class="relative flex items-center bg-gradient-to-br from-brownish via-orangish via-redmagenta to-brownish w-full rounded-tl-2xl rounded-tr-2xl h-[12rem]">
+      <div class="relative w-full flex left-12 h-[50%] gap-6">
+        <img src="${worker.photo}" class="relative rounded-2xl w-[6rem] h-[6rem] top-5 object-cover aspect-[1/1]">
+        <div class="flex flex-col gap-1">
+          <h3 class="font-bold text-md text-white">${worker.name}</h3>
+          <h4 class="font-bold text-sm">${worker.role}</h4>
+          <p class="font-semibold text-sm text-underbg">currently in: ${worker.current ?? "N/A"}</p>
+          <p class="font-semibold text-sm text-underbg">${worker.email}</p>
+          <p class="font-semibold text-sm text-underbg">${worker.phone}</p>
+        </div>
+      </div>
+    </div>
+    <div class="flex flex-col justify-center w-[23rem] md:w-[30rem]">
+      <p class="self-center">Experiences</p>
+      <div id="exp-conts" class="w-[23rem] h-[7rem] md:h-[12rem] md:w-[30rem] overflow-y-auto [scrollbar-width:none] rounded-xl"></div>
+    </div>
+  `;
+
+  // Display experience list
+  const expDiv = document.getElementById("exp-conts");
+  worker.exps.forEach(exp => {
+    expDiv.innerHTML += `
+      <div class="mt-4 w-[30rem] h-[6rem]">
+        <h3>Experience In: ${exp.expIn}</h3>
+        <p>From: ${exp.From}</p>
+        <p>To: ${exp.To}</p>
+      </div>`;
+  });
+}
 
 const Name = document.getElementById("name");
 const role = document.getElementById("role");
@@ -258,6 +300,8 @@ AddWorkerForm.addEventListener("click", (e) => {
   let worker = { name: Name.value, role: role.value, photo: photo.value, email: email.value, phone: phone.value, exps: experiences};
 
   if (formCont.checkValidity()) {
+      const exps = collectExperiences();
+      console.log(exps);
     if (sideWorkers.children.length === 10) {
       alert("this is the maximum number of workers you can add");
     }
@@ -283,55 +327,20 @@ AddWorkerForm.addEventListener("click", (e) => {
       preview.classList.add("hidden");
       imgBg.classList.remove("hidden");
     }
-
+    
   }
 
+
   
   
   
   
 
 
-const workerDetails = document.querySelectorAll(".workerph");
 
-function displayProfile (profile = dat){
-workerDetails.forEach(photo =>{
-  photo.addEventListener("click", () => {
-    profileBG.classList.remove("hidden");
-    let div = `
-                  <div class="relative flex items-center bg-gradient-to-br from-brownish via-orangish via-redmagenta to-brownish w-full rounded-tl-2xl rounded-tr-2xl h-[12rem]">
-                <div class="relative w-full flex left-12 h-[50%] gap-6">
-                  <img src="${profile.photo}" class="relative rounded-2xl w-[6rem] h-[6rem] top-5 object-cover aspect-[1/1]">
-                  <div class="flex flex-col gap-1">
-                    <h3 class="font-bold text-md text-white">
-                      ${profile.name}
-                    </h3>
-                    <h4 class="font-bold text-sm">
-                      ${profile.role}
-                    </h4>
-                    <p class="font-semibold text-sm text-underbg">
-                      currently in: ${profile.current}
-                    </p>
-                    <p class="font-semibold text-sm text-underbg">
-                      ${profile.email}
-                    </p>
-                    <p class="font-semibold text-sm text-underbg">
-                      ${profile.phone}
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div>
-                <p>
-                  Experiences
-                </p>
-              </div> `
-              profileCont.innerHTML = div;
-  })
-})
-  }
 
-      displayProfile(worker);
+
+
 
 profileBG.addEventListener("click", () => {
   profileBG.classList.add("hidden");
@@ -374,7 +383,6 @@ displaySiders(dat);
 
 
 
- 
 
 // sideWorkers.addEventListener("click", (e) =>{
 //   if(e.target.classList.contains("remove")) {
@@ -399,6 +407,18 @@ displayPhoto();
 //   worker.classList.remove("bg-red");
 //   worker.classList.add("opacity-80");
 // });
+sideWorkers.addEventListener("click", (e) => {
+  const img = e.target.closest(".workerph");
+  if (!img) return;
+
+  const name = img.parentElement.querySelector("h4").textContent.trim();
+  const worker = dat.find(w => w.name === name);
+
+  if (!worker) return;
+
+  openProfile(worker);
+});
+
 
 
 addAWorker.addEventListener("click", () => {
