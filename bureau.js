@@ -207,10 +207,21 @@ function displayWorkers(list) {
     worker.current = currentRoom;
     container.appendChild(workerDiv);
 
-    if(!(roomCont === 'conference' && roomCont === 'personnel')){
-      roomCont.classList.add("hover:bg-uncommon/15");
-      roomCont.classList.remove("hover:bg-red/15");
+
+
+    if(roomCont.children.length > 0){
+      if(roomCont === 'conference' || roomCont === 'personnel'){
+        roomCont.classList.add("hover:bg-uncommon/15");
+        roomCont.classList.remove("hover:bg-red/15");
+      }
+      
     }
+    else{
+      roomCont.classList.add("hover:bg-red/15");
+      roomCont.classList.remove("hover:bg-uncommon/15")
+    }
+
+
     addAWorker.classList.add("hidden");
 
 
@@ -218,23 +229,25 @@ function displayWorkers(list) {
 
     const remWorker = document.querySelectorAll(".rem-btn");
     
-    const sidebarItem = [...sideWorkers.children].find(el =>
+    let sidebarItem = [...sideWorkers.children].find(el =>
       el.querySelector("h4").textContent.trim() === worker.name &&
       el.querySelector("p").textContent.trim() === worker.role);
-      let deletedItem = sidebarItem;
       if (sidebarItem) sidebarItem.remove();
-      
       console.log("Assigned worker:", worker);
 
-      
 
       remWorker.forEach(btn => {
+        let deletedItem = sidebarItem;
         btn.addEventListener("click", (e) => {
           const workers = e.target.closest(".work");
           workers.remove();
-          sideWorkers.appendChild(deletedItem);
+
+          if(deletedItem.name === workers.name && deletedItem.role === workers.role){
+            sideWorkers.appendChild(deletedItem);
+          }
         })
-});
+
+})
 })
     sideWorkers1.appendChild(workerDiv);
   });
@@ -253,6 +266,8 @@ plusbtn.forEach(btn => {
   });
 });
 
+
+//Display the profile div
   function openProfile(worker) {
   profileBG.classList.remove("hidden");
 
@@ -307,7 +322,7 @@ AddWorkerForm.addEventListener("click", (e) => {
     }
     else {
       dat.push(worker)
-        console.log(dat);
+      experiences = [];
       console.log(dat);
       formBG.classList.add('hidden');
       let sideContainer = `
